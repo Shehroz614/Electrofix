@@ -23,10 +23,10 @@ function Nabvar() {
           <div className="NavSecDiv">
             <ul className="NavList">
               <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Projects</li>
+                <li>Scope</li>
               </motion.a>
               <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Experience</li>
+                <li>Services</li>
               </motion.a>
               <motion.a whileTap={{ scale: 0.95 }} href="/">
                 <li>About</li>

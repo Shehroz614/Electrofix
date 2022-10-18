@@ -3,7 +3,10 @@
   color: white;
   position: relative;
   overflow: hidden;
+  /* margin-top: -70px;
+  z-index: -1; */
 }
+
 
 .MainDiv .Title {
   font-family: Fuzzy Bubbles, cursive;
@@ -21,6 +24,7 @@
   top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+
 }
 
 .MainDiv2 {
@@ -318,19 +322,61 @@ background-size: cover;
 
 .footer{
   min-height: 400px;
-  background-color: #000000ef;
+  background-color: #000000f6;
+  background: url("/public/Assets/images/footer-background.jpg") center center;
   color: white;
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .footer div{
-  padding:0 7%;
-  width: 10%;
+  padding:10% 2%;
+  width: 17%;
 }
+
+.FooterTitle{
+  font-family: 'Fuzzy Bubbles', cursive;
+  
+
+}
+.footer h3{
+  font-weight: 400;
+
+}
+
+.footer p{
+  font-size: 14px;
+}
+
+.footer a{
+  color: white;
+  font-size: 14px;
+  padding-bottom: 6px;
+}
+
+.footer>div>div>input{
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  box-shadow: none;
+  width:90%;
+}
+
+.footer>div>div.input{
+  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 0%;
+  opacity: 0.8;
+}
+
+
 
 
 
@@ -476,9 +522,14 @@ background-size: cover;
 
 .footer div{
   padding:0 7%;
-  width: 25%;
+  width: 35%;
   padding-bottom: 50px;
   padding-top: 20px;
+}
+
+.footer>div:first-child{
+  margin-top: -7px;
+
 }
 
 

@@ -1,0 +1,23 @@
+.Dashboard{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.Dashboard>div:first-child{
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.Dashboard>div:nth-child(2){
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(163, 0, 0, 0.315);
+}
+
+.Dashboard>div:last-child{
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(199, 202, 0, 0.856);
+}
