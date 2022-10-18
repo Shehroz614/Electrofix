@@ -1,0 +1,570 @@
+.MainDiv {
+  height: 90vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.MainDiv .Title {
+  font-family: Fuzzy Bubbles, cursive;
+}
+
+.MainDiv .MainHeading {
+  font-size: 50px;
+}
+
+.MainDiv2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.MainDiv2 {
+  height: 100%;
+  width: 100%;
+  background: url("../../public/Assets/images/Main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
+}
+
+.MainDiv2:hover {
+  transform: scale(1.05);
+}
+
+.MainDIvText {
+  position: absolute;
+  top: 25%;
+  right: 18%;
+  text-align: center;
+}
+
+.MainDivButtons {
+  display: flex;
+  justify-content: space-around;
+  overflow: visible;
+}
+
+.MainDivButtons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px 20px;
+  background-color: #000000ec;
+  border-radius: 4%;
+  border: 0.5px solid #ffffff94;
+}
+
+.MainDivButtons > div:hover {
+  border: 1px solid #000000ec;
+  background-color: transparent;
+  background-color: #00000063;
+}
+
+.HomeSecDiv {
+  min-height: 750px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.HomeSecDiv2 {
+  padding-top: 80px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Services {
+  width: 100%;
+  /* background-color: red; */
+  margin-bottom: 50px;
+}
+
+.ServicesRow {
+  margin-top: 30px;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.Service {
+  background-color: white;
+  height: 200px;
+  width: 240px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.034);
+  /* box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.082); */
+  border-radius: 5%;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.Service:hover{
+  scale:1.1
+}
+
+.Service img {
+  width: 40%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  height: 40%;
+}
+
+.Service div {
+  margin: auto;
+  width: 90%;
+  height: 50%;
+  padding-top: 25%;
+}
+
+.MainThirdDiv {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 30px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MainThirdDiv > div {
+  overflow: hidden;
+}
+
+.MainThirdDiv1 {
+  width: 47%;
+}
+
+.MainThirdDiv2 {
+  display: flex;
+}
+
+.MainThirdDiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.MainThirdDiv2 > div {
+  width: 50%;
+  flex: 1;
+}
+
+.MainThirdDiv1 > div {
+  height: 50%;
+}
+
+.MainThirdDiv .TextDiv h2 {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 0;
+  padding-top: 15%;
+}
+
+.MainThirdDiv .TextDiv p {
+  padding-left: 5%;
+  padding-right: 5%;
+
+}
+
+.MainThirdDiv .TextDiv{
+  background-color: #01afaf0e;
+  margin-top: 0;
+}
+
+.ForthDiv{
+  width:90%;
+  min-height: 300px;
+  display:flex;
+  /* gap: 5%; */
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.ForthDiv2{
+  width:33%;
+  height: 300px;
+  position: relative;
+  /* border-right: 1px solid rgba(128, 128, 128, 0.39); */
+  text-align: center;
+  margin-top: -40px;
+}
+
+
+
+.ForthDiv2 h3{
+  font-weight: 500;
+}
+
+
+.ForthDiv2 p{
+  padding: 10%;
+  padding-top: 0;
+}
+
+
+.ForthDiv2:last-child{
+  border-right: none;
+}
+
+.ForthDiv2:not(:last-child):after{
+  content: "";
+    position: absolute;
+    background: #00000013;
+    width: 1px;
+    height: 230px;
+    top: 45%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+
+.ForthDiv .imageDiv{
+  width:17%;
+  height:20%;
+  border:1px solid grey;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.ForthDiv .imageDiv img{
+  width:60%;
+  height:60%;
+  margin-top:16%
+}
+
+.ForthDiv2 p{
+  font-size: 14px;
+}
+
+
+.FifthDiv{
+  width: 90%;
+  display: flex;
+  gap: 10%;
+  min-height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+}
+
+.FifthDiv>div{
+      width: 45%;
+      height: 700px;
+      position: relative;
+}
+
+.FifthDiv .first{
+background: url("../../public/Assets/images/worker.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.FifthDiv .second{
+  background: url("../../public/Assets/images/customer2.jpg");
+  background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+
+.FifthDiv>div>div{
+  margin:auto;
+  width:70%;
+  height:50%;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+  margin-top: 40%;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.479);
+  text-align: center;
+  
+}
+
+.FifthDiv>div>div>button{
+  width:40%;
+  padding: 10px;
+  background-color: #01afaf;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.FifthDiv>div>div>p{
+  padding: 20px;
+}
+
+
+.footer{
+  min-height: 400px;
+  background-color: #000000ef;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer div{
+  padding:0 7%;
+  width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
+  .MainThirdDiv .TextDiv h2 {
+    font-size: 15px;
+  }
+
+  .MainThirdDiv .TextDiv p {
+    font-size: 12px;
+  }
+
+  .MainThirdDiv {
+    height: 400px;
+  }
+
+  .ForthDiv{
+    margin-top:-100px;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  .Service {
+    height: 170px;
+    width: 170px;
+  }
+
+  .MainThirdDiv1 {
+    width: 100%;
+  }
+
+  .MainThirdDiv .TextDiv h2 {
+    font-size: 11px;
+  }
+
+  .MainThirdDiv .TextDiv p {
+    font-size: 9px;
+  }
+
+  .MainDIvText {
+    left: 20%;
+    top: 20%;
+  }
+
+  .MainDiv .MainHeading {
+    font-size: 35px;
+  }
+
+  .MainDiv .Title {
+    font-size: 25px;
+  }
+
+  .MainDiv span {
+    font-size: 13px;
+  }
+
+  .MainDivButtons > div {
+    scale: 0.9;
+    padding: 3px 10px;
+  }
+
+  .ForthDiv{
+    margin-top:400px;
+    flex-direction: column;
+  }
+
+  .ForthDiv2{
+    border:none;
+    width:100%
+  }
+
+  .ForthDiv2:not(:last-child):after{
+    content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0);
+      width: 1px;
+      height: 230px;
+      top: 45%;
+      left: 100%;
+      transform: translateY(-50%);
+  }
+
+  
+.FifthDiv{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.FifthDiv>div{
+  width: 100%;
+  height: 600px;
+}
+
+.footer div{
+  padding:0 7%;
+  width: 25%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .ForthDiv{
+    margin-top:250px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .Service {
+    height: 120px;
+    width: 120px;
+  }
+
+  .Service div {
+    font-size: 12px;
+  }
+
+  .HomeSecDiv2 > h1 {
+    font-size: 20px;
+  }
+
+  .MainDiv2 {
+    background: url("../../public/Assets/images/Main2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* .MainDiv{
+    height: 70vh;
+  } */
+
+  .ForthDiv{
+    margin-top:150px;
+}
+}
+
+
+
+
+
+@media screen and (max-width: 400px) {
+
+  .ForthDiv{
+    margin-top:50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

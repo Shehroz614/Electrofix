@@ -1,0 +1,486 @@
+body {
+  overflow-x: hidden;
+  font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: #01afaf0e; */
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 1px 1px 2px 2px #00a89a73;
+}
+
+.NavList {
+  font-weight: 500;
+  display: flex;
+  gap: 15%;
+  list-style-type: none;
+  margin-top: 0;
+  padding-top: 20px;
+  justify-content: center !important;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.Nav {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: "center";
+  border-bottom: 1px solid rgba(128, 128, 128, 0.404);
+  background-color: white;
+}
+
+.NavMenu {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* .SideNav{
+  position: absolute;
+  background-color: white;
+  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  padding: 20px;
+  z-index: 10;
+
+}
+ */
+
+ .SideNav{
+  position: absolute;
+  top :0;
+  background-color: white;
+  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  padding: 20px;
+  z-index: 10;
+  width:50%;
+  height: 100vh;
+
+}
+
+.SideNavList{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    gap:30px;
+    font-size: 14px;
+    font-weight: 500;
+    
+    
+}
+
+.SideNavList li{
+  cursor: pointer;
+  border-bottom: 1px solid #8080802d;
+  padding-bottom: 20px;
+}
+
+.Nav a {
+  padding-top: 2px;
+  font-size: 14px;
+  position: relative;
+}
+
+.Nav a :before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  background-color: #0f00006e;
+  transform-origin: top right;
+  transition: transform 0.25s ease-out;
+}
+
+.Nav a :hover:before {
+  transform: scaleX(1);
+  transform-origin: top left;
+}
+
+
+.NavTitle {
+  font-weight: 900;
+  font-size: 30px;
+  flex: 1;
+  margin-top: 10px;
+  color: #007979;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+.NavTitle a{
+  font-weight: 900;
+  font-size: 30px;
+  
+  color: #007979;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+
+
+.SignIn {
+  flex: 1;
+  text-align: right;
+  padding-bottom: 10px;
+  margin-top: 6px;
+}
+
+.SignIn a {
+  border: 1px solid;
+  border-color: #00000023;
+  border-radius: 10px;
+  padding: 4px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  /* background-color: #01afaf; */
+  /* color: #ffffff; */
+}
+
+.SignIn a:hover {
+  /* color: rgba(0, 0, 0, 0.658); */
+  border-color: rgba(0, 0, 0, 0.308);
+}
+
+.blob {
+  position: absolute;
+  width: 25%;
+  height: 450px;
+  margin-left: 10%;
+  margin-top: 4%;
+  background-color: #0586ff;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.SignInpage {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-color: #01afaf0e;
+}
+
+.SignInLeft {
+  width: 50%;
+  /* flex: 1; */
+}
+
+.signInWelcome {
+  position: absolute;
+  margin-left: 20%;
+  text-align: right;
+  margin-top: 65px;
+  font-weight: 500;
+  font-style: italic;
+  color: #01afaf;
+  z-index: 0;
+}
+
+.form {
+  width: 50%;
+  z-index: 1;
+  margin: 0;
+  /* flex: 2; */
+}
+
+.SignInform {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.SignUpform {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+
+}
+
+
+.SignInform>input ,.SignUpform>input{
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  width: 96%;
+}
+
+.SignUpform>div.inputs{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.SignUpform>div>input{
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  width:50%;
+
+}
+
+.SignUpform button, .SignInform button {
+  padding: 8px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #01afaf;
+  border: 1px solid #01afaf;
+  color: white;
+}
+
+button.noAccount {
+  padding: 8px;
+  width: 98%;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #01afaf;
+  color: black;
+}
+
+.SignUpform button:hover, .SignInform button:hover  {
+  background-color: #009b9b;
+  cursor: pointer;
+}
+
+.SignInform button.noAccount:hover {
+  background-color: #009b9b;
+  color: white;
+  cursor: pointer;
+}
+
+.SignInform div#forgotP {
+  font-size: 12px;
+  margin-left: auto;
+  margin-top: -15px;
+  margin-right: 10px;
+}
+
+.userType{
+  width: 55%;
+  padding: 6px 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  color: grey;
+}
+
+input.date{
+  padding:0px;
+  color:grey;
+}
+
+.WelcomeImage {
+  padding-top: 100px;
+  padding-left: 20px;
+  width: 60%;
+  scale: 0.9;
+}
+
+.NavSecDiv {
+  flex: 3;
+}
+
+
+
+.AltSignIn{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AltSignIn div{
+  border: 1px solid rgba(128, 128, 128, 0.418);
+  border-radius: 30px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px;
+  cursor: pointer;
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  .SignInLeft {
+    width: 50%;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .SignInform, .SignUpform {
+    width: 60%;
+  }
+  .WelcomeImage {
+    padding: 100px 20px;
+    scale: 0.8;
+  }
+
+  .signInWelcome {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .NavSecDiv {
+    flex: 1;
+  }
+
+  .SignInLeft {
+    flex: 1;
+  }
+
+  .form {
+    flex: 1;
+  }
+
+  .SignInform, .SignUpform  {
+    width: 80%;
+  }
+
+  .WelcomeImage {
+    padding: 100px 20px;
+    scale: 0.9;
+  }
+
+  .signInWelcome {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .SignInLeft {
+    position: absolute;
+  }
+
+  .SignInform, .SignUpform  {
+    width: 70%;
+  }
+  .WelcomeImage {
+    padding: 100px 20px;
+    scale: 2.5;
+    opacity: 0.3;
+    margin-top: 300px;
+    margin-left: 60%;
+  }
+
+  .signInWelcome {
+    display: none;
+  }
+
+  .NavSecDiv {
+    display: none;
+  }
+
+  .NavTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .SignIn a {
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .NavMenu {
+    display: inline;
+    top: 0;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: larger;
+  }
+
+  .Nav {
+    padding-top: 0%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.144);
+  }
+
+  .SignIn {
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .AltSignIn div{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  .SideNav {
+    display: none;
+    
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
