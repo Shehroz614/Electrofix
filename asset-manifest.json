@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Electrofix/static/css/main.35edcab1.css",
+    "main.js": "/Electrofix/static/js/main.3e7530d5.js",
+    "static/media/Main.jpg": "/Electrofix/static/media/Main.c7156fb9f0351374c27d.jpg",
+    "static/media/Main2.jpg": "/Electrofix/static/media/Main2.2fc35f0454f699da189c.jpg",
+    "static/media/worker.jpg": "/Electrofix/static/media/worker.0a5ed9fabc0f8e3c7b64.jpg",
+    "static/media/customer2.jpg": "/Electrofix/static/media/customer2.8988bc1bfa9a6093d1e7.jpg",
+    "index.html": "/Electrofix/index.html",
+    "main.35edcab1.css.map": "/Electrofix/static/css/main.35edcab1.css.map",
+    "main.3e7530d5.js.map": "/Electrofix/static/js/main.3e7530d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35edcab1.css",
+    "static/js/main.3e7530d5.js"
+  ]
+}
