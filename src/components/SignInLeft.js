@@ -23,7 +23,7 @@ function SignInLeft() {
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
           className="WelcomeImage"
-          src="..\Assets\images\businessman2.webp"
+          src="/Assets/images/businessman2.webp"
           alt="Businessman"
         />
       </div>
