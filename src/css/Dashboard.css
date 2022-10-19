@@ -18,10 +18,23 @@
 
 .Dashboard>div.DashboardMain{
     width: 90%;
-    height: 89.5vh;
+    height: 82vh;
     margin-left: auto;
     /* background-color: rgba(0, 163, 136, 0.123); */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
 }
+
+.Dashboard>div.DashboardMain>div{
+width: 100%;
+height: 100%;
+background-color: rgba(128, 128, 128, 0.26);
+}
+
+
 
 .Dashboard>div.DashboardSidebar div.options{
     display: flex;

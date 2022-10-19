@@ -5,6 +5,8 @@ import RequestsDiv from "./RequestsDiv.js"
 import OrdersDiv from "./OrdersDiv.js"
 import MessagesDiv from "./MessagesDiv.js"
 import ProfileDiv from "./ProfileDiv.js"
+import AgentsDiv from "./AgentsDiv"
+import CustomersDiv from "./CustomersDiv"
 
 function DashboardMain() {
   return (
@@ -16,6 +18,8 @@ function DashboardMain() {
           <Route exact path="/orders/" element={<OrdersDiv/>} ></Route>;
           <Route exact path="/messages/" element={<MessagesDiv/>} ></Route>;
           <Route exact path="/profile/" element={<ProfileDiv/>} ></Route>;
+          <Route exact path="/agents/" element={<AgentsDiv/>} ></Route>;
+          <Route exact path="/customers/" element={<CustomersDiv/>} ></Route>;
         </Routes>
     
     </div>

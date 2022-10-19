@@ -22,18 +22,18 @@ function Nabvar() {
           <div className="NavTitle"><a href="/">ElectroFix</a></div>
           <div className="NavSecDiv">
             <ul className="NavList">
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Scope</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Services</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>About</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Contact</li>
-              </motion.a>
+              <Link to="/">
+                <motion.li whileTap={{ scale: 0.95 }}>Scope</motion.li>
+              </Link>
+              <Link to="/">
+                <motion.li whileTap={{ scale: 0.95 }}>Services</motion.li>
+              </Link>
+              <Link to="/about/">
+                <motion.li whileTap={{ scale: 0.95 }}>About</motion.li>
+              </Link>
+              <Link whileTap={{ scale: 0.95 }} to="/contact/">
+                <motion.li whileTap={{ scale: 0.95 }}>Contact</motion.li>
+              </Link>
             </ul>
           </div>
           <motion.div
@@ -82,18 +82,18 @@ function Nabvar() {
             </div>
 
             <ul className="SideNavList">
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Projects</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Experience</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>About</li>
-              </motion.a>
-              <motion.a whileTap={{ scale: 0.95 }} href="/">
-                <li>Contact</li>
-              </motion.a>
+            <Link to="/">
+                <motion.li whileTap={{ scale: 0.95 }}>Scope</motion.li>
+              </Link>
+              <Link to="/">
+                <motion.li whileTap={{ scale: 0.95 }}>Services</motion.li>
+              </Link>
+              <Link to="/about/">
+                <motion.li whileTap={{ scale: 0.95 }}>About</motion.li>
+              </Link>
+              <Link whileTap={{ scale: 0.95 }} to="/contact/">
+                <motion.li whileTap={{ scale: 0.95 }}>Contact</motion.li>
+              </Link>
             </ul>
           </motion.div>
         )}
