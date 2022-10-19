@@ -1,9 +1,9 @@
 .Dashboard{
     display: flex;
     height: 89.5vh;
-    width: 110%;
+    width: 100%;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 
@@ -13,11 +13,91 @@
     background-color: rgba(0, 0, 0, 0.856);
     position: relative;
     border-radius: 0 10px 10px 0;
+
 }
 
 .Dashboard>div.DashboardMain{
-    width: 55%;
+    width: 90%;
     height: 89.5vh;
-    background-color: rgba(163, 0, 0, 0.315);
+    margin-left: auto;
+    /* background-color: rgba(0, 163, 136, 0.123); */
 }
 
+.Dashboard>div.DashboardSidebar div.options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    /* text-align: left !important; */
+    margin-top: 100px;
+    padding-left: 20%;
+    color: white;
+
+}
+
+.Dashboard>div.DashboardSidebar div.options h3{
+    font-weight: 400;
+    padding: 0;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 15px;
+}
+
+.Dashboard>div.DashboardSidebar div.options>div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 6px 0;
+    color: rgb(194, 194, 194);
+    
+}
+
+
+.Dashboard>div.DashboardSidebar div.options>a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 6px 0;
+    color: rgb(194, 194, 194);
+   
+}
+
+.Dashboard>div.DashboardSidebar div.options>div>div{
+    cursor: pointer;
+}
+
+.Dashboard>div.DashboardSidebar div.options>a>div{
+    cursor: pointer;
+}
+
+.Dashboard>div.DashboardSidebar div.options>div:hover{
+    
+    color: white;
+    scale: 1.05;
+}
+
+.Dashboard>div.DashboardSidebar div.options>a:hover{
+    
+    color: white;
+    scale: 1.05;
+}
+
+
+
+@media screen and (max-width:700px) {
+
+    .iconExpand{
+        display: none;
+    }
+
+
+    .Dashboard>div.DashboardSidebar div.options{
+        
+        margin-top: 50px;
+    
+    }
+    
+}

@@ -12,8 +12,8 @@ function App() {
         <Nabvar />
         <Routes>
         <Route exact path="/" element={<Home/>} ></Route>;
-          <Route exact path="/SignIn" element={<SignIn/>} ></Route>;
-          <Route exact path="/Dashboard" element={<Dashboard/>} ></Route>;
+          <Route exact path="/SignIn/" element={<SignIn/>} ></Route>;
+          <Route path="/Dashboard/*" element={<Dashboard/>} ></Route>;
         </Routes>
       </Router>
     </div>
