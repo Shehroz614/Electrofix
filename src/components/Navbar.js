@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 function Nabvar() {
   const [SideMenu, SetSideMenu] = useState(false);
 
-  // SideMenu &&
-  // document.onClick(SetSideMenu(false)) ;
+  const location = useLocation(); // once ready it returns the 'window.location' object
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
+
 
   return (
     <div>
@@ -22,17 +26,20 @@ function Nabvar() {
           <div className="NavTitle"><a href="/">ElectroFix</a></div>
           <div className="NavSecDiv">
             <ul className="NavList">
-              <Link to="/">
-                <motion.li whileTap={{ scale: 0.95 }}>Scope</motion.li>
+            <Link to="/">
+                <motion.li className={url==="/" ? "NavActive" : ""} whileTap={{ scale: 0.95 }}>Home</motion.li>
               </Link>
-              <Link to="/">
-                <motion.li whileTap={{ scale: 0.95 }}>Services</motion.li>
+              <Link to="/scope/">
+                <motion.li  className={url==="/scope/" ? "NavActive" : ""} whileTap={{ scale: 0.95 }}>Scope</motion.li>
+              </Link>
+              <Link to="/services/">
+                <motion.li  className={url==="/services/" ? "NavActive" : ""} whileTap={{ scale: 0.95 }}>Services</motion.li>
               </Link>
               <Link to="/about/">
-                <motion.li whileTap={{ scale: 0.95 }}>About</motion.li>
+                <motion.li  className={url==="/about/" ? "NavActive" : ""} whileTap={{ scale: 0.95 }}>About</motion.li>
               </Link>
               <Link whileTap={{ scale: 0.95 }} to="/contact/">
-                <motion.li whileTap={{ scale: 0.95 }}>Contact</motion.li>
+                <motion.li  className={url==="/contact/" ? "NavActive" : ""} whileTap={{ scale: 0.95 }}>Contact</motion.li>
               </Link>
             </ul>
           </div>
@@ -82,17 +89,40 @@ function Nabvar() {
             </div>
 
             <ul className="SideNavList">
-            <Link to="/">
-                <motion.li whileTap={{ scale: 0.95 }}>Scope</motion.li>
+            <Link to="/" >
+                <motion.li  
+                onClick={() => {
+                  SetSideMenu(!SideMenu);
+                }}
+                whileTap={{ scale: 0.95 }}>Home</motion.li>
               </Link>
-              <Link to="/">
-                <motion.li whileTap={{ scale: 0.95 }}>Services</motion.li>
+            <Link to="/scope/" >
+                <motion.li  
+                onClick={() => {
+                  SetSideMenu(!SideMenu);
+                }}
+                whileTap={{ scale: 0.95 }}>Scope</motion.li>
+              </Link>
+              <Link to="/services/">
+                <motion.li 
+                onClick={() => {
+                  SetSideMenu(!SideMenu);
+                }}
+                whileTap={{ scale: 0.95 }}>Services</motion.li>
               </Link>
               <Link to="/about/">
-                <motion.li whileTap={{ scale: 0.95 }}>About</motion.li>
+                <motion.li 
+                onClick={() => {
+                  SetSideMenu(!SideMenu);
+                }}
+                whileTap={{ scale: 0.95 }}>About</motion.li>
               </Link>
               <Link whileTap={{ scale: 0.95 }} to="/contact/">
-                <motion.li whileTap={{ scale: 0.95 }}>Contact</motion.li>
+                <motion.li 
+                onClick={() => {
+                  SetSideMenu(!SideMenu);
+                }}
+                whileTap={{ scale: 0.95 }}>Contact</motion.li>
               </Link>
             </ul>
           </motion.div>

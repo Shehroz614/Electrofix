@@ -8,15 +8,23 @@ input:focus{
   outline: none;
   box-shadow: 1px 1px 2px 2px #00a89a73;
 }
+textarea:focus{
+  outline: none;
+  box-shadow: 1px 1px 2px 2px #00a89a73;
+}
 
 .NavList {
   font-weight: 500;
   display: flex;
-  gap: 15%;
+  gap: 10%;
   list-style-type: none;
   margin-top: 0;
   padding-top: 20px;
   justify-content: center !important;
+}
+
+.NavActive{
+  font-weight: bold;
 }
 
 a {

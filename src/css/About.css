@@ -2,6 +2,10 @@
         width: 100%;
         height: 300px;
         background-color: rgba(0, 0, 0, 0.87);
+        background: url("../../public/Assets/images/aboutMain.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .About>div.About1 h1{
@@ -37,6 +41,11 @@
     margin-top: 100px;
     gap: 10%;
     margin-bottom: 100px;
+   
+}
+
+.About2out{
+    min-height: 600px;
 }
 
 .About .About2>div{

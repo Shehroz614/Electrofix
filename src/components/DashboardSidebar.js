@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -8,7 +8,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonIcon from '@mui/icons-material/Person';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import PeopleIcon from '@mui/icons-material/People';
 
@@ -20,6 +20,17 @@ function DashboardSidebar() {
   expand ? (padding = "20%") : (padding = "37%");
   !expand ? (iconSize = "30px") : (iconSize = "25px");
   const isAdmin= false;
+
+
+    
+  const location = useLocation(); // once ready it returns the 'window.location' object
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+    console.log(url);
+    // eslint-disable-next-line
+  }, [location]);
+
 
   return (
     <motion.div
@@ -68,14 +79,14 @@ function DashboardSidebar() {
       initial={{ paddingLeft: padding }}
       animate={{ paddingLeft: (window.innerWidth)>700 ? padding : "20%" }}
       className="options">
-        <Link to="/dashboard/">
+        <Link to="/dashboard/" className={url==="/dashboard/" ? "DashActive" : ""}>
           <div><DashboardIcon sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
           animate={{ display: optionDisplay }}
           >Dashboard</motion.h3>
         </Link>
-        <Link to="/dashboard/orders/">
+        <Link to="/dashboard/orders/"  className={url==="/dashboard/orders/" ? "DashActive" : ""}>
           <div><WorkIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
@@ -85,7 +96,7 @@ function DashboardSidebar() {
 
 
         {!isAdmin && (
-        <Link to="/dashboard/requests/">
+        <Link to="/dashboard/requests/" className={url==="/dashboard/requests/" ? "DashActive" : ""}>
           <div><QueueIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
@@ -96,7 +107,7 @@ function DashboardSidebar() {
       }  
 
 {!isAdmin && (
-        <Link to="/dashboard/messages/">
+        <Link to="/dashboard/messages/" className={url==="/dashboard/messages/" ? "DashActive" : ""}>
           <div><MailOutlineIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
@@ -108,7 +119,7 @@ function DashboardSidebar() {
 
 
 {isAdmin && (
-        <Link to="/dashboard/agents/">
+        <Link to="/dashboard/agents/"  className={url==="/dashboard/agents/" ? "DashActive" : ""}>
           <div><SupportAgentIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
@@ -120,7 +131,7 @@ function DashboardSidebar() {
 
 
 {isAdmin && (
-        <Link to="/dashboard/customers/">
+        <Link to="/dashboard/customers/"  className={url==="/dashboard/customers/" ? "DashActive" : ""}>
           <div><PeopleIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}
@@ -130,7 +141,7 @@ function DashboardSidebar() {
 )}
 
 
-        <Link to="/dashboard/profile/">
+        <Link to="/dashboard/profile/"  className={url==="/dashboard/profile/" ? "DashActive" : ""}>
           <div><PersonIcon sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
           initial={{ display: optionDisplay }}

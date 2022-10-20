@@ -7,6 +7,12 @@
     
 }
 
+.DashActive h3, .DashActive div{
+    color: white;
+    scale: 1.1;
+}
+
+
 .Dashboard>div.DashboardSidebar{
     width: 20%;
     height: 89.5vh;

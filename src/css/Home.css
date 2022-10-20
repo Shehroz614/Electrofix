@@ -323,7 +323,7 @@ background-size: cover;
 .footer{
   min-height: 400px;
   background-color: #000000f6;
-  background: url("/public/Assets/images/footer-background.jpg") center center;
+  /* background: url("/public/Assets/images/footer-background.jpg") center center; */
   color: white;
   margin-top: 20px;
   display: flex;

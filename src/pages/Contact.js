@@ -4,6 +4,7 @@ import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 function Contact() {
   return (
@@ -56,9 +57,10 @@ function Contact() {
         </div>
 
         <div className="ContactRight">
-          <ContactForm/>
+          <ContactForm />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
