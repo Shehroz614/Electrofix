@@ -1,22 +1,27 @@
 .Dashboard{
     display: flex;
-    height: 89.5vh;
+    /* height: 89.5vh; */
+    min-height: 89.5vh;
     width: 100%;
     position: relative;
-    /* overflow: hidden; */
+    background-color: rgba(128, 128, 128, 0.052);
     
 }
 
+
 .DashActive h3, .DashActive div{
     color: white;
-    scale: 1.1;
+    scale: 1.2;
 }
+
 
 
 .Dashboard>div.DashboardSidebar{
     width: 20%;
-    height: 89.5vh;
+    /* height: 89.5vh; */
+    /* height: 100%; */
     background-color: rgba(0, 0, 0, 0.856);
+    /* position: fixed; */
     position: relative;
     border-radius: 0 10px 10px 0;
 
@@ -24,9 +29,10 @@
 
 .Dashboard>div.DashboardMain{
     width: 90%;
-    height: 82vh;
+    /* height: 82vh; */
     margin-left: auto;
     /* background-color: rgba(0, 163, 136, 0.123); */
+    /* padding-left: 22%; */
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
@@ -69,7 +75,7 @@ background-color: rgba(128, 128, 128, 0.26);
     gap: 20px;
     justify-content: space-between;
     margin: 6px 0;
-    color: rgb(194, 194, 194);
+    color: rgb(219, 219, 219);
     
 }
 
@@ -93,7 +99,6 @@ background-color: rgba(128, 128, 128, 0.26);
 }
 
 .Dashboard>div.DashboardSidebar div.options>div:hover{
-    
     color: white;
     scale: 1.05;
 }
@@ -105,6 +110,109 @@ background-color: rgba(128, 128, 128, 0.26);
 }
 
 
+.DashboardDiv{
+    background-color: transparent !important;
+    height: 100%;
+}
+
+.CardsDiv{
+    width:100%;
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+
+.CardsDiv>div{
+    width:30%;
+    height:200px;
+    border-radius: 0px;  
+    color: white;
+    /* background-color: rgba(35, 83, 92, 0.363); */
+    /* background-color: white;
+    color: black; */
+    border: 1px solid grey;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.062); */
+}
+
+.CardsDiv>div:hover{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.144);
+}
+
+.CardsDiv>div h3{
+    font-weight: 500;
+    padding-left: 20px;
+    margin: 8px 0px;
+}
+
+.CardsDiv>div>div{
+    width:100%;
+    background-color: white;
+    height: 77%;
+}
+
+.CircularBar{
+    width: 35%;
+    padding: 5%;
+    height: 10%;
+}
+
+.CardsDiv>div.orders{
+    background-color: rgba(146, 0, 0, 0.466);
+    border: 1px solid rgba(146, 0, 0, 0.466);
+}
+
+.CardsDiv>div.requests{
+    background-color: rgba(190, 187, 0, 0.466);
+    border: 1px solid rgba(190, 187, 0, 0.466);
+}
+
+.CardsDiv>div.ratings{
+    background-color: rgba(0, 102, 116, 0.452);
+    border: 1px solid rgba(0, 102, 116, 0.452);
+}
+
+
+.chartDiv{
+    width: 100%;
+    display: flex;
+}
+
+.CardsDiv>div>div h5{
+    font-weight: 400;
+ }
+
+ .chartDiv>div:first-child{
+    width: 63%;
+    padding-top: 20px;
+   
+ }
+
+ .chartDiv>div:last-child{
+    width: 34%;
+    padding-top: 20px;
+   /* margin-bottom: 0%; */
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:700px) {
 
@@ -114,9 +222,67 @@ background-color: rgba(128, 128, 128, 0.26);
 
 
     .Dashboard>div.DashboardSidebar div.options{
-        
         margin-top: 50px;
-    
+    }
+
+
+    .CardsDiv{
+        width: 100%;
+        /* flex-direction: column; */
+    }
+
+    /* .CardsDiv>div{
+        width:98%; 
+        margin-top: 10px;
+    } */
+
+    /* .CardsDiv>div:not(:last-child){
+        width:47%;
+        margin-top: 10px; 
+    } */
+
+    .CardsDiv>div{
+        width:47%;
+        margin-top: 10px; 
+        height: 140px;
+        border-radius: 4px; 
+    }
+
+
+    .CircularBar{
+        width:60%;
+    }
+
+
+
+    .CardsDiv>div>div h5{
+       margin: 6px 0px;
+       font-weight: 100;
+       font-size: 10px;
+       padding: 0;
+       margin-left:5px ;
+    }
+
+
+    .chartDiv{
+        flex-direction: column;
     }
     
+    
+     .chartDiv>div:first-child{
+        width: 100%;
+        padding-top: 20px;
+       
+     }
+    
+     .chartDiv>div:last-child{
+        width: 100%;
+        padding-top: 20px;
+        margin-bottom: 10px;
+       
+     }
+
+ 
+
+
 }

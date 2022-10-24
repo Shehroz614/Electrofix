@@ -13,6 +13,27 @@ textarea:focus{
   box-shadow: 1px 1px 2px 2px #00a89a73;
 }
 
+
+
+input[type=date] {
+  text-align: right;
+}
+
+input[type="date"]:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+
+input[type="date"]:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before {
+  content: '' !important;
+}
+
 .NavList {
   font-weight: 500;
   display: flex;
@@ -35,6 +56,7 @@ a {
 .Nav {
   padding-top: 10px;
   padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 15px;
   display: flex;
   height: 40px;
@@ -49,17 +71,6 @@ a {
   position: absolute;
   cursor: pointer;
 }
-
-/* .SideNav{
-  position: absolute;
-  background-color: white;
-  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
-  padding: 20px;
-  z-index: 10;
-
-}
- */
 
  .SideNav{
   position: absolute;
@@ -162,6 +173,79 @@ a {
   /* color: rgba(0, 0, 0, 0.658); */
   border-color: rgba(0, 0, 0, 0.308);
 }
+
+
+.NavUserDiv{
+  flex: 1;
+  padding-bottom: 3px;
+  margin-top: 6px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.NavUserDiv>div.userImg{ 
+  width:30%;
+  margin-left: 70px;
+  border-radius: 50%;
+  text-align: right
+}
+
+.NavUserDiv>div.userImg>img{ 
+  width:60%;
+  height: 60%;
+  border-radius: 50%;
+  padding-top: 10px;
+  margin-right: 5px;
+  min-width: 50px;
+}
+
+.NavUserDiv>div.userImg>img:hover{ 
+  scale: 1.05
+  
+}
+
+
+
+.NavUserDiv>.userDropdown>.css-hwaqf3-MuiSvgIcon-root{
+  padding-top: 50%;
+  cursor: pointer;
+  /* z-index: 110; */
+}
+
+
+.userDropdownDiv{
+  position : absolute;
+  height: 200px;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.144);
+  right:0;
+  margin-right: 3%;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.userDropdownList{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  padding: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.userDropdownList>a:not(:last-child){
+  border-bottom: 1px solid rgba(128, 128, 128, 0.082);
+}
+
+
+
+
 
 .blob {
   position: absolute;
@@ -439,6 +523,10 @@ input.date{
     text-align: center;
   }
 
+  .NavTitle a{
+    font-size: 25px;
+  }
+
   .SignIn a {
     border-radius: 10px;
     padding: 3px 10px;
@@ -450,7 +538,7 @@ input.date{
   .NavMenu {
     display: inline;
     top: 0;
-    margin-top: 7px;
+    margin-top: 11px;
     margin-left: 10px;
     font-weight: 600;
     font-size: larger;
@@ -471,6 +559,31 @@ input.date{
   .AltSignIn div{
     font-size: 10px;
   }
+
+  .NavUserDiv{
+   padding-bottom: 0;
+  }
+
+  .NavUserDiv a{
+      font-size: 12px;
+   }
+
+  .NavUserDiv>div.userImg{
+    margin-left: auto;
+   }
+
+   .userDropdown{
+    z-index: 1;
+   }
+
+   .NavUserDiv>div.userImg>img{ 
+    min-width: auto;
+    width:25%;
+   }
+
+   .userDropdownDiv a{
+      font-size: 12px;
+   }
 
 }
 

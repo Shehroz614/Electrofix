@@ -1,5 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {post, get} from "../helpers/FetchApi"
+
+async function handleSignUp(e) {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const fname = document.getElementById("fname").value;
+  const lname = document.getElementById("lname").value;
+
+  e.preventDefault();
+  const data = {
+    email: email,
+    password: password,
+    fname : fname,
+    lname : lname
+  };
+  const url = "http://localhost:5000/api/auth/";
+
+  const response = await post(url, data);
+  localStorage.setItem("Auth_Token", response);
+  if(response!=="User Already Exists"){
+  const user = await get("http://localhost:5000/api/auth/getuser");
+    console.log(user)
+    window.alert(`signed up with following Auth Token \n ${response} \n\n and the user is ${user.fname+" "+user.lname}`)
+    }
+    console.log(response);
+}
+
 
 function SignUpForm(props) {
   return (
@@ -36,22 +63,18 @@ function SignUpForm(props) {
         </select>
       </div>
       <div className="inputs">
-        <label style={{ marginLeft: "5px", fontSize: "14px", width: "57%" }}>
-          Date of Birth
-        </label>
-        <input
+        <input type="text" name="phone" id="phone" class="phone" placeholder="Mobile Number"></input>
+        <input style={{paddingTop:"4px", paddingbottom:"3px"}}
           type="date"
-          id="date"
-          class="date"
-          name="date"
+          id="DOB"
+          class="DOB"
+          name="DOB"
           placeholder="Date of birth"
         />
       </div>
       <motion.button
         whileTap={{ scale: 0.99 }}
-        onClick={(e) => {
-          e.preventDefault();
-        }}
+        onClick={handleSignUp}
       >
         Sign Up
       </motion.button>
