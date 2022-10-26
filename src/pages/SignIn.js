@@ -9,13 +9,13 @@ function SignIn() {
   const [signUp, setSignUp]= useState(false);
   // eslint-disable-next-line
   const [signIn, setSignIn]= useState(true);
-
+  const [open, setOpen] = useState(false);
   return (
     <div className="SignInpage">
       <SignInLeft/>
       <div className="form">
-        { signIn &&        <SignInForm setSignUp={setSignUp} setSignIn={setSignIn}/>}
-        { signUp &&        <SignUpForm setSignUp={setSignUp} setSignIn={setSignIn}/>}
+        { signIn &&        <SignInForm setSignUp={setSignUp} setSignIn={setSignIn} open={open} setOpen={setOpen}/>}
+        { signUp &&        <SignUpForm setSignUp={setSignUp} setSignIn={setSignIn}  open={open} setOpen={setOpen}/>}
       </div>
     </div>
   );

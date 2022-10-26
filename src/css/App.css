@@ -263,6 +263,7 @@ a {
   position: relative;
   width: 100%;
   background-color: #01afaf0e;
+  height: 100vh;
 }
 
 .SignInLeft {
@@ -309,6 +310,35 @@ a {
   gap: 20px;
   width: 50%;
 
+}
+
+.ErrorDiv{
+  background : white;
+    width:20%;
+    margin-Left:auto;
+    margin-Right: auto;
+    margin-Top:17%;
+    /* padding: 30px; */
+    border-Radius: 5px;
+    text-Align:center;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.ErrorDiv:hover{
+  margin-top: 16.7%;
+  box-shadow: 5px 10px 10px #00000060;
+}
+
+.ErrorTitle{
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.897);
+  color: white;
+}
+
+.ErrorDesc{
+  padding:30px;
+  padding-top: 10px;
 }
 
 

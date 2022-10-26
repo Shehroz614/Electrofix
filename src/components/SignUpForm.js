@@ -3,17 +3,15 @@ import { motion } from "framer-motion";
 import { SignUp } from "../helpers/Auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import SignInModal from "./SignInModal";
 
 function SignUpForm(props) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const [values, setValues] = useState(null);
   const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
+  const [desc, setDesc]= useState(" ") ;
+ 
   const HandleSignUp = async () => {
     const credentials = {
       email: values.email.toLowerCase(),
@@ -26,17 +24,23 @@ function SignUpForm(props) {
       userType: values.userType,
       phone: values.phone,
     };
-
+    
 
     if (credentials.password !== credentials.Cpassword) {
-      window.alert("Password and conform password are not same");
+      // window.alert("Password and conform password are not same");
+      setDesc("Password and conform password are not same");
+      props.setOpen(true);
     } else if (
       !credentials.fname ||
       !credentials.lname ||
       credentials.lname.length < 3 ||
       credentials.fname.length < 3
     ) {
-      window.alert("Name should be atleast 3 letters long");
+      // window.alert("Name should be atleast 3 letters long");
+      setDesc("Name should be atleast 3 letters long");
+      console.log(desc)
+      props.setOpen(true);
+      
     } else if (
       !credentials.city ||
       !credentials.phone ||
@@ -45,17 +49,30 @@ function SignUpForm(props) {
       !credentials.DOB ||
       credentials.city.length < 3
     ) {
-      window.alert("Enter all fields");
+      // window.alert("Enter all fields");
+      setDesc("Enter all fields")
+      props.setOpen(true);
     } else {
       const done = await SignUp(credentials, dispatch, state);
       if(done){
         navigate("/");
        }
+       else{
+        setDesc("Some Error - Check your credentials again")
+      props.setOpen(true);
+       }
     }
   };
 
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  
+
   return (
     <div className="SignUpform">
+      
       <h4 style={{ fontWeight: "500" }}>Sign Up</h4>
       <div
         className="inputs"
@@ -139,7 +156,7 @@ function SignUpForm(props) {
         Sign Up
       </motion.button>
 
-      <div style={{ fontSize: "13px" }}>Already have an account?</div>
+      <div style={{ fontSize: "13px" }} >Already have an account?</div>
       <motion.button
         whileTap={{ scale: 0.99 }}
         onClick={(e) => {
@@ -151,6 +168,7 @@ function SignUpForm(props) {
       >
         Sign In
       </motion.button>
+      {props.open && <SignInModal open={props.open} setOpen={props.setOpen} desc={desc} />}
     </div>
   );
 }

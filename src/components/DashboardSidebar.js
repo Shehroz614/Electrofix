@@ -8,9 +8,11 @@ import WorkIcon from "@mui/icons-material/Work";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonIcon from '@mui/icons-material/Person';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import PeopleIcon from '@mui/icons-material/People';
+import { SignOut } from "../helpers/Auth";
+import { useDispatch } from "react-redux";
 
 function DashboardSidebar() {
   const [expand, setExpand] = useState(false);
@@ -20,10 +22,16 @@ function DashboardSidebar() {
   expand ? (padding = "20%") : (padding = "37%");
   !expand ? (iconSize = "30px") : (iconSize = "25px");
   const isAdmin= false;
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
+  const handleSignOut = () => {
+    SignOut(dispatch);
+    navigate("/");
+  }
 
     
-  const location = useLocation(); // once ready it returns the 'window.location' object
+  const location = useLocation();
   const [url, setUrl] = useState(null);
   useEffect(() => {
     setUrl(location.pathname);
@@ -150,8 +158,9 @@ function DashboardSidebar() {
         </Link>
 
         <div>
-          <div><ExitToAppIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
+          <div onClick={handleSignOut}><ExitToAppIcon  sx={{fontSize: (window.innerWidth)>700 ? iconSize : "20px"}}/></div>
           <motion.h3
+          onClick={handleSignOut}
           initial={{ display: optionDisplay }}
           animate={{ display: optionDisplay }}
           >Sign Out </motion.h3>

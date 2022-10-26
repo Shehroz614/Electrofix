@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Signin } from "../helpers/Auth";
 import { useNavigate } from "react-router-dom";
+import SignInModal from "./SignInModal";
 
 function SignInForm(props) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const [values, setValues] = useState(null);
   const navigate = useNavigate();
+  const [desc, setDesc]= useState(" ") ;
 
 
   const handleChange = (e) => {
@@ -28,10 +30,15 @@ function SignInForm(props) {
    if(done){
     navigate("/");
    }
+   else{
+    setDesc("Invalid Credentials")
+      props.setOpen(true);
+   }
   };
 
   return (
     <div className="SignInform">
+      
       <h4 style={{ fontWeight: "500" }}>Sign In</h4>
       <input
         type="email"
@@ -101,6 +108,7 @@ function SignInForm(props) {
       >
         Sign Up
       </motion.button>
+      {props.open && <SignInModal open={props.open} setOpen={props.setOpen} desc={desc} />}
     </div>
   );
 }

@@ -44,6 +44,7 @@
 width: 100%;
 height: 100%;
 background-color: rgba(128, 128, 128, 0.26);
+/* padding-top: 20px; */
 }
 
 
@@ -194,11 +195,50 @@ background-color: rgba(128, 128, 128, 0.26);
    /* margin-bottom: 0%; */
  }
 
+ .NewRequestButton{
+    width:13%;
+    margin-left: auto;
+    margin-right: 20px;
+    background: white;
+    border: 1px solid black;
+    padding: 5px 5px;
+    
+}
+
+.NewRequestButton>a>div{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NewRequestDiv{
+    background-color: transparent !important;
+    height: 100%;
+}
+
+.NewRequestDiv>h2{
+    text-align: center;
+}
+
+.NewRequestDiv>div.options{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.NewRequestDiv>div.options>div>select{
+    width:150px;
+}
 
 
+.NewRequestDiv>div.showAgents{
 
-
-
+    background-color: white;
+    height: 70%;
+    width: 100%;
+    margin-top: 40px;
+}
 
 
 

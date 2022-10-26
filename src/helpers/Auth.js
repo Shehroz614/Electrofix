@@ -11,11 +11,9 @@ export const Signin = async (credentials, dispatch, state) => {
   const response = await post(url, data);
   if (response === "Invalid email") {
     console.log("Enter valid email");
-    window.alert("Enter valid email");
     return false;
   } else if (response === "Invalid credentials") {
     console.log("Enter valid password");
-    window.alert("Enter valid password");
     return false;
   } else {
     localStorage.setItem("Auth_Token", response);
@@ -51,13 +49,11 @@ export const SignUp = async (credentials, dispatch, state) => {
     dispatch({ type: "SignIn", payload: user });
     return true;
   } else {
-    console.log("Some Error - Check your credentials again");
-    window.alert("Some Error - Check your credentials again");
+    return false
   }
 };
 
 export const SignOut = async (dispatch) => {
   localStorage.removeItem("Auth_Token");
   dispatch({ type: "SignOut" });
-  console.log("Signed out");
 };
