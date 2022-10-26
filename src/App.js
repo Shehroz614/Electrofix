@@ -8,11 +8,17 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Scope from "./pages/Scope";
 import Services from "./pages/Services";
+import { Provider } from "react-redux";
+import store from "./redux/stores/Store";
+import Avin from "./components/Avin";
 
 function App() {
+
   return (
+    <Provider store={store}>
     <div>
       <Router>
+      <Avin />
         <Nabvar />
         <Routes>
         <Route exact path="/" element={<Home/>} ></Route>;
@@ -25,6 +31,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </Provider>
   );
 }
 

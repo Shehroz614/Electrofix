@@ -4,18 +4,29 @@ import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useDispatch, useSelector } from "react-redux";
+import { SignOut } from "../helpers/Auth";
 
 function Nabvar() {
+ 
+  const state = useSelector((state) => state);
   const [SideMenu, SetSideMenu] = useState(false);
-  // eslint-disable-next-line
-  const [isUser, setUser] = useState(true);
+  const [isUser, setUser] = useState(state.isLoggedIn);
   const [userDropdown, setUserDropdown] = useState(false);
-
+  const dispatch = useDispatch();
   const location = useLocation();
   const [url, setUrl] = useState(null);
+
+
   useEffect(() => {
     setUrl(location.pathname);
+
   }, [location]);
+
+
+  useEffect(() => {
+  setUser(state.isLoggedIn);
+  }, [state]);
 
   return (
     <div>
@@ -63,7 +74,7 @@ function Nabvar() {
                   About
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/contact/">
+              <Link to="/contact/">
                 <motion.li
                   className={url === "/contact/" ? "NavActive" : ""}
                   whileTap={{ scale: 0.95 }}
@@ -89,7 +100,7 @@ function Nabvar() {
                 <img src="/Assets/images/shehroz.jpeg" alt="" />
               </motion.div>
               <motion.div whileTap={{ scale: 0.97 }}>
-                <Link to="/dashboard/">Shehroz</Link>
+                <Link to="/dashboard/">{state.user.fname}</Link>
               </motion.div>
               <motion.div
                 key="dropdown"
@@ -180,7 +191,7 @@ function Nabvar() {
                   About
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/contact/">
+              <Link to="/contact/">
                 <motion.li
                   onClick={() => {
                     SetSideMenu(!SideMenu);
@@ -197,8 +208,9 @@ function Nabvar() {
         {userDropdown && (
           <div className="userDropdownDiv">
             <ul className="userDropdownList">
-              <Link whileTap={{ scale: 0.95 }} to="/dashboard/">
+              <Link to="/dashboard/">
                 <motion.li
+                key="li1"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -207,8 +219,9 @@ function Nabvar() {
                   Dashboard
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/dashboard/profile/">
+              <Link to="/dashboard/profile/">
                 <motion.li
+                key="li2"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -217,8 +230,9 @@ function Nabvar() {
                   Profile
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/dashboard/orders/">
+              <Link to="/dashboard/orders/">
                 <motion.li
+                key="li3"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -227,8 +241,9 @@ function Nabvar() {
                   Orders
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/dashboard/messages/">
+              <Link to="/dashboard/messages/">
                 <motion.li
+                key="li4"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -237,11 +252,13 @@ function Nabvar() {
                   Messages
                 </motion.li>
               </Link>
-              <Link whileTap={{ scale: 0.95 }} to="/">
+              <Link to="/">
                 <motion.li
+                key="li5"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
-                    setUser(!isUser);
+                    setUser(false);
+                    SignOut(dispatch)
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
