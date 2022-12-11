@@ -87,7 +87,7 @@ function DashboardDiv() {
             <div style={{ paddingRight: "2px" }}>
               <h5>Total orders: 65</h5>
               <h5>Completed orders: 45</h5>
-              <h5>Vanceled orders: 20</h5>
+              <h5>Canceled orders: 20</h5>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ function DashboardDiv() {
             <div style={{ paddingRight: "2px" }}>
               <h5>Total orders: 65</h5>
               <h5>Completed orders: 45</h5>
-              <h5>Vanceled orders: 20</h5>
+              <h5>Canceled orders: 20</h5>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ function DashboardDiv() {
             <div style={{ paddingRight: "2px" }}>
               <h5>Total orders: 65</h5>
               <h5>Completed orders: 45</h5>
-              <h5>Vanceled orders: 20</h5>
+              <h5>Canceled orders: 20</h5>
             </div>
           </div>
         </div>

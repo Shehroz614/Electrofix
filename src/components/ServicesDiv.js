@@ -41,7 +41,7 @@ function ServicesDiv() {
             <div className="ServicesRow">
               {
               
-              services.map((item) => {
+              services.map((item, index) => {
                 x=x+0.1;
                 return (
                   <motion.div
@@ -49,6 +49,7 @@ function ServicesDiv() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3, delay: x}}
                     className="Service"
+                    key = {index}
                   >
                     <img src={item.image} alt="Service" />
                     <div>
