@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { SignOut } from "../helpers/Auth";
 
 function Nabvar() {
- 
   const state = useSelector((state) => state);
   const [SideMenu, SetSideMenu] = useState(false);
   const [isUser, setUser] = useState(state.isLoggedIn);
@@ -17,15 +16,12 @@ function Nabvar() {
   const location = useLocation();
   const [url, setUrl] = useState(null);
 
-
   useEffect(() => {
     setUrl(location.pathname);
-
   }, [location]);
 
-
   useEffect(() => {
-  setUser(state.isLoggedIn);
+    setUser(state.isLoggedIn);
   }, [state]);
 
   return (
@@ -96,10 +92,10 @@ function Nabvar() {
             </motion.div>
           ) : (
             <motion.div className="NavUserDiv">
-              <motion.div whileTap={{ scale: 0.97 }} className="userImg">
+              <motion.div whileTap={{ scale: 0.97 }} key="dropdown3" className="userImg">
                 <img src="/Assets/images/shehroz.jpeg" alt="" />
               </motion.div>
-              <motion.div whileTap={{ scale: 0.97 }}>
+              <motion.div whileTap={{ scale: 0.97 }} key="dropdown2">
                 <Link to="/dashboard/">{state.user.fname}</Link>
               </motion.div>
               <motion.div
@@ -206,11 +202,11 @@ function Nabvar() {
         )}
 
         {userDropdown && (
-          <div className="userDropdownDiv">
+          <div className="userDropdownDiv" key="userDropdownDiv">
             <ul className="userDropdownList">
               <Link to="/dashboard/">
                 <motion.li
-                key="li1"
+                  key="li1"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -221,7 +217,7 @@ function Nabvar() {
               </Link>
               <Link to="/dashboard/profile/">
                 <motion.li
-                key="li2"
+                  key="li2"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -232,7 +228,7 @@ function Nabvar() {
               </Link>
               <Link to="/dashboard/orders/">
                 <motion.li
-                key="li3"
+                  key="li3"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -243,7 +239,7 @@ function Nabvar() {
               </Link>
               <Link to="/dashboard/messages/">
                 <motion.li
-                key="li4"
+                  key="li4"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                   }}
@@ -254,11 +250,11 @@ function Nabvar() {
               </Link>
               <Link to="/">
                 <motion.li
-                key="li5"
+                  key="li5"
                   onClick={() => {
                     setUserDropdown(!userDropdown);
                     setUser(false);
-                    SignOut(dispatch)
+                    SignOut(dispatch);
                   }}
                   whileTap={{ scale: 0.95 }}
                 >

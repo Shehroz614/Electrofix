@@ -32,12 +32,20 @@ function DashboardSidebar() {
 
     
   const location = useLocation();
-  const [url, setUrl] = useState(null);
+  const [url, setUrl] = useState("null");
   useEffect(() => {
+    
     setUrl(location.pathname);
-    console.log(url);
+    
+    // console.log(url);
     // eslint-disable-next-line
   }, [location]);
+
+  useEffect(() => {
+    
+    console.log(url);
+  }, [url]);
+
 
 
   return (
