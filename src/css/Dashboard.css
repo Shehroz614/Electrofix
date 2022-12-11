@@ -241,6 +241,15 @@ background-color: rgba(128, 128, 128, 0.26);
 }
 
 
+.NewRequestDiv>div.showAgents>div.agent{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+
 
 
 

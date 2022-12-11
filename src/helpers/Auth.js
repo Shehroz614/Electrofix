@@ -36,7 +36,7 @@ export const SignUp = async (credentials, dispatch, state) => {
     userType: credentials.userType,
     phone: credentials.phone,
   };
-  console.log(credentials)
+  
   const url = "http://localhost:5000/api/auth/";
 
   const response = await post(url, data);
