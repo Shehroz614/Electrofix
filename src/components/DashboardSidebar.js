@@ -36,13 +36,11 @@ function DashboardSidebar() {
   useEffect(() => {
     
     setUrl(location.pathname);
-    
     // console.log(url);
     // eslint-disable-next-line
   }, [location]);
 
   useEffect(() => {
-    
     console.log(url);
   }, [url]);
 

@@ -246,9 +246,14 @@ padding-top: 10px;
 .NewRequestDiv>div.showAgents>div.agent{
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 
+}
+
+.NewRequestDiv>div.showAgents>div.agent>div{
+width: 20%;
+/* text-align: center; */
 }
 
 

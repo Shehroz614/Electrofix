@@ -77,7 +77,7 @@ function NewRequest() {
         agents.map((agent, index) => {
           
             return (
-                <div className="agent" key={index}> <div>{agent.image}</div> <div>{agent.name}</div> <div>{agent.city}</div> <div>{agent.skills}</div> <div>{agent.rating}</div></div>
+                <div className="agent" key={index}> <div>{agent.image}</div> <div>{agent.name}</div> <div>{agent.city}</div> <div>{agent.skills.map(v => <>{v}<br></br></>)}</div> <div>{agent.rating}</div></div>
             );
         })
         }

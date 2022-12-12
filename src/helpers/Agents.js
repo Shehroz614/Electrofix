@@ -41,6 +41,20 @@ const agents = [
         skills : ["plumber", "laptop Repairer"] ,
         city : "Lahore" 
     },
+    {
+        name : "Mehmood Raza" ,
+        image : "" ,
+        rating : "5" ,
+        skills : ["plumber", "laptop Repairer"] ,
+        city : "Lahore"
+    },
+    {
+        name : "Rana Asim" ,
+        image : "" ,
+        rating : "5" ,
+        skills : ["plumber", "laptop Repairer"] ,
+        city : "Lahore"
+    }
 ]
 
 module.exports= agents;
