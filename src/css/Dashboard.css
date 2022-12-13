@@ -330,7 +330,7 @@ NewRequestDiv > div.options > div{
 
 div.ShowRequests{
     background-color: white;
-  min-height: 400px;
+  height: 400px;
   width: 100%;
   margin-top: 20px;
   overflow: hidden;
@@ -345,6 +345,17 @@ div.ShowRequests> div.request{
     justify-content: space-around;
     padding: 20px;
     border-bottom: 1px solid rgb(216, 216, 216);
+    
+  }
+
+  div.ShowRequests> div.request div{
+    flex: 1
+    
+  }
+
+  
+  div.ShowRequests> div.request div:last-child{
+    text-align: center;
     
   }
 

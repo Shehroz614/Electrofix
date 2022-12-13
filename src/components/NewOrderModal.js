@@ -2,11 +2,13 @@ import React from 'react'
 import { Box, Modal, Typography } from "@mui/material";
 import { post, get } from '../helpers/FetchApi';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 function NewOrderModal(props) {
 
     const [values, setValues] = useState(null);
+    const navigate = useNavigate();
 
     const handleClose = () => {
         props.setOpen(false);
@@ -29,12 +31,14 @@ function NewOrderModal(props) {
             title : values.Title,
             discription : values.Description,
             payment : values.Amount,
-            expectedDeliveryDate : values.DeliveryDate
+            expectedDeliveryDate : values.DeliveryDate,
+            status : "pending"
         }
         console.log(data)
         const response = await post(url, data);
         console.log(response);
         handleClose();
+        navigate("/dashboard/requests");
 
     }
 
