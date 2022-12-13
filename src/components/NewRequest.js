@@ -79,10 +79,11 @@ function NewRequest() {
       </div>
 
       <div className="showAgents">
+      <div className="agent"><div>Image</div><div>Name</div><div>City</div><div>Skills</div><div>Rating</div><div></div></div>
         {agents.map((agent, index) => {
           return (
             <div className="agent" key={index}>
-              <div>{agent.image}</div> <div>{agent.fname}</div>
+              <div>{agent.image}img</div> <div>{agent.fname}</div>
               <div>{agent.city}</div>
               <div>
                 {agent.skills.map((v, index) => (
