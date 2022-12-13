@@ -1,344 +1,409 @@
-.Dashboard{
-    display: flex;
-    /* height: 89.5vh; */
-    min-height: 89.5vh;
-    width: 100%;
-    position: relative;
-    background-color: rgba(128, 128, 128, 0.052);
-    
+.Dashboard {
+  display: flex;
+  /* height: 89.5vh; */
+  min-height: 89.5vh;
+  width: 100%;
+  position: relative;
+  background-color: rgba(128, 128, 128, 0.052);
 }
 
-
-.DashActive h3, .DashActive div{
-    color: white;
-    scale: 1.2;
+.DashActive h3,
+.DashActive div {
+  color: white;
+  scale: 1.2;
 }
 
-
-
-.Dashboard>div.DashboardSidebar{
-    width: 20%;
-    /* height: 89.5vh; */
-    /* height: 100%; */
-    background-color: rgba(0, 0, 0, 0.856);
-    /* position: fixed; */
-    position: relative;
-    border-radius: 0 10px 10px 0;
-
+.Dashboard > div.DashboardSidebar {
+  width: 20%;
+  /* height: 89.5vh; */
+  /* height: 100%; */
+  background-color: rgba(0, 0, 0, 0.856);
+  /* position: fixed; */
+  position: relative;
+  border-radius: 0 10px 10px 0;
 }
 
-.Dashboard>div.DashboardMain{
-    width: 90%;
-    /* height: 82vh; */
-    margin-left: auto;
-    /* background-color: rgba(0, 163, 136, 0.123); */
-    /* padding-left: 22%; */
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: hidden;
+.Dashboard > div.DashboardMain {
+  width: 90%;
+  /* height: 82vh; */
+  margin-left: auto;
+  /* background-color: rgba(0, 163, 136, 0.123); */
+  /* padding-left: 22%; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
 }
 
-.Dashboard>div.DashboardMain>div{
-width: 100%;
-height: 100%;
-background-color: rgba(128, 128, 128, 0.26);
-padding-top: 10px;
+.Dashboard > div.DashboardMain > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.26);
+  padding-top: 10px;
 }
 
-
-
-.Dashboard>div.DashboardSidebar div.options{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    /* text-align: left !important; */
-    margin-top: 100px;
-    padding-left: 20%;
-    color: white;
-
+.Dashboard > div.DashboardSidebar div.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  /* text-align: left !important; */
+  margin-top: 100px;
+  padding-left: 20%;
+  color: white;
 }
 
-.Dashboard>div.DashboardSidebar div.options h3{
-    font-weight: 400;
-    padding: 0;
-    padding-bottom: 3px;
-    cursor: pointer;
-    margin: 0;
-    font-size: 15px;
+.Dashboard > div.DashboardSidebar div.options h3 {
+  font-weight: 400;
+  padding: 0;
+  padding-bottom: 3px;
+  cursor: pointer;
+  margin: 0;
+  font-size: 15px;
 }
 
-.Dashboard>div.DashboardSidebar div.options>div{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    margin: 6px 0;
-    color: rgb(219, 219, 219);
-    
+.Dashboard > div.DashboardSidebar div.options > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 6px 0;
+  color: rgb(219, 219, 219);
 }
 
-
-.Dashboard>div.DashboardSidebar div.options>a{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    margin: 6px 0;
-    color: rgb(194, 194, 194);
-   
+.Dashboard > div.DashboardSidebar div.options > a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 6px 0;
+  color: rgb(194, 194, 194);
 }
 
-.Dashboard>div.DashboardSidebar div.options>div>div{
-    cursor: pointer;
+.Dashboard > div.DashboardSidebar div.options > div > div {
+  cursor: pointer;
 }
 
-.Dashboard>div.DashboardSidebar div.options>a>div{
-    cursor: pointer;
+.Dashboard > div.DashboardSidebar div.options > a > div {
+  cursor: pointer;
 }
 
-.Dashboard>div.DashboardSidebar div.options>div:hover{
-    color: white;
-    scale: 1.05;
+.Dashboard > div.DashboardSidebar div.options > div:hover {
+  color: white;
+  scale: 1.05;
 }
 
-.Dashboard>div.DashboardSidebar div.options>a:hover{
-    
-    color: white;
-    scale: 1.05;
+.Dashboard > div.DashboardSidebar div.options > a:hover {
+  color: white;
+  scale: 1.05;
 }
 
-
-.DashboardDiv{
-    background-color: transparent !important;
-    height: 100%;
+.DashboardDiv {
+  background-color: transparent !important;
+  height: 100%;
 }
 
-.CardsDiv{
-    width:100%;
-    display: flex;
-    gap: 3%;
-    flex-wrap: wrap;
+.CardsDiv {
+  width: 100%;
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
 }
 
-.CardsDiv>div{
-    width:30%;
-    height:200px;
-    border-radius: 0px;  
-    color: white;
-    /* background-color: rgba(35, 83, 92, 0.363); */
-    /* background-color: white;
+.CardsDiv > div {
+  width: 30%;
+  height: 200px;
+  border-radius: 0px;
+  color: white;
+  /* background-color: rgba(35, 83, 92, 0.363); */
+  /* background-color: white;
     color: black; */
-    border: 1px solid grey;
-    overflow: hidden;
-    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.062); */
+  border: 1px solid grey;
+  overflow: hidden;
+  /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.062); */
 }
 
-.CardsDiv>div:hover{
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.144);
+.CardsDiv > div:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.144);
 }
 
-.CardsDiv>div h3{
-    font-weight: 500;
-    padding-left: 20px;
-    margin: 8px 0px;
+.CardsDiv > div h3 {
+  font-weight: 500;
+  padding-left: 20px;
+  margin: 8px 0px;
 }
 
-.CardsDiv>div>div{
-    width:100%;
-    background-color: white;
-    height: 77%;
+.CardsDiv > div > div {
+  width: 100%;
+  background-color: white;
+  height: 77%;
 }
 
-.CircularBar{
-    width: 35%;
-    padding: 5%;
-    height: 10%;
+.CircularBar {
+  width: 35%;
+  padding: 5%;
+  height: 10%;
 }
 
-.CardsDiv>div.orders{
-    background-color: rgba(146, 0, 0, 0.466);
-    border: 1px solid rgba(146, 0, 0, 0.466);
+.CardsDiv > div.orders {
+  background-color: rgba(146, 0, 0, 0.466);
+  border: 1px solid rgba(146, 0, 0, 0.466);
 }
 
-.CardsDiv>div.requests{
-    background-color: rgba(190, 187, 0, 0.466);
-    border: 1px solid rgba(190, 187, 0, 0.466);
+.CardsDiv > div.requests {
+  background-color: rgba(190, 187, 0, 0.466);
+  border: 1px solid rgba(190, 187, 0, 0.466);
 }
 
-.CardsDiv>div.ratings{
-    background-color: rgba(0, 102, 116, 0.452);
-    border: 1px solid rgba(0, 102, 116, 0.452);
+.CardsDiv > div.ratings {
+  background-color: rgba(0, 102, 116, 0.452);
+  border: 1px solid rgba(0, 102, 116, 0.452);
+}
+
+.chartDiv {
+  width: 100%;
+  display: flex;
+}
+
+.CardsDiv > div > div h5 {
+  font-weight: 400;
+}
+
+.chartDiv > div:first-child {
+  width: 63%;
+  padding-top: 20px;
+}
+
+.chartDiv > div:last-child {
+  width: 34%;
+  padding-top: 20px;
+  /* margin-bottom: 0%; */
+}
+
+.NewRequestButton {
+  width: 13%;
+  margin-left: auto;
+  margin-right: 20px;
+  background: white;
+  border: 1px solid black;
+  padding: 2px 0px;
+  font-size: 13px;
+}
+
+.NewRequestButton > a > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.NewRequestDiv {
+  background-color: transparent !important;
+  height: 100%;
+}
+
+.NewRequestDiv > h2 {
+  text-align: center;
+}
+
+.NewRequestDiv > div.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+NewRequestDiv > div.options > div{
+    flex : 1
+}
+
+.NewRequestDiv > div.options > div > select {
+  width: 150px;
+  margin: 0 12px;
+  padding: 2px 10px;
+}
+
+.NewRequestDiv > .SearchButtonDiv{
+    text-align: right;
+    padding: 12px;
+}
+
+.NewRequestDiv > .SearchButtonDiv button{
+    padding: 2px 30px;
+    cursor: pointer;
+}
+
+.NewRequestDiv > div.showAgents {
+  background-color: white;
+  min-height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 2px solid grey;
+}
+
+.NewRequestDiv > div.showAgents > div.agent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  
+}
+
+.NewRequestDiv > div.showAgents > div.agent > div {
+  /* width: 15%; */
+  /* text-align: center; */
+  flex:1
+}
+
+.NewRequestDiv > div.showAgents > div.agent > div .orderButton {
+    padding: 5px 12px;
+    background-color: rgb(36, 97, 59);
+    color: white;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    
+}
+
+.NewRequestDiv > div.showAgents > div.agent > div .messageButton {
+    padding: 5px 12px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
 }
 
 
-.chartDiv{
-    width: 100%;
+.NewOrderModalDiv{
+    background : white;
+      width:30%;
+      margin-Left:auto;
+      margin-Right: auto;
+      margin-Top:13%;
+      border-Radius: 5px;
+      text-Align:center;
+      transition: all 0.2s;
+      overflow: hidden;
+      padding: 20px;
+  }
+
+
+  .NewOrderModalDiv:hover{
+    box-shadow: 5px 10px 10px #00000060;
+  }
+
+
+  .NewOrderModalDiv .OrderModalTitle{
+
+  }
+
+  .NewOrderModalDiv .OrderModalDetails{
+    
+}
+
+  .NewOrderModalDiv .OrderModalButtons{
     display: flex;
-}
-
-.CardsDiv>div>div h5{
-    font-weight: 400;
- }
-
- .chartDiv>div:first-child{
-    width: 63%;
-    padding-top: 20px;
-   
- }
-
- .chartDiv>div:last-child{
-    width: 34%;
-    padding-top: 20px;
-   /* margin-bottom: 0%; */
- }
-
- .NewRequestButton{
-    width:13%;
-    margin-left: auto;
-    margin-right: 20px;
-    background: white;
-    border: 1px solid black;
-    padding: 2px 0px;
-    font-size: 13px;
-    
+    flex-direction:row;
+    justify-content: center;
     
 }
 
-.NewRequestButton>a>div{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+.NewOrderModalDiv .OrderModalButtons>div{
+    /* flex:1; */  
 }
 
-.NewRequestDiv{
-    background-color: transparent !important;
-    height: 100%;
+.NewOrderModalDiv .OrderModalButtons>div button{
+    margin: 20px;
 }
 
-.NewRequestDiv>h2{
-    text-align: center;
+.NewOrderModalDiv .OrderModalDetails input{
+    margin: 10px 20px;
+    width: 75%;
 }
 
-.NewRequestDiv>div.options{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.NewRequestDiv>div.options>div>select{
-    width:150px;
+.NewOrderModalDiv .OrderModalDetails textarea{
+    margin: 10px 20px;
+    height: 80px;
+    width: 75%;
 }
 
 
-.NewRequestDiv>div.showAgents{
 
-    background-color: white;
-    height: 70%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .iconExpand {
+    display: none;
+  }
+
+  .Dashboard > div.DashboardSidebar div.options {
+    margin-top: 50px;
+  }
+
+  .CardsDiv {
     width: 100%;
-    margin-top: 40px;
-}
+    /* flex-direction: column; */
+  }
 
-
-.NewRequestDiv>div.showAgents>div.agent{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-
-}
-
-.NewRequestDiv>div.showAgents>div.agent>div{
-width: 20%;
-/* text-align: center; */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:700px) {
-
-    .iconExpand{
-        display: none;
-    }
-
-
-    .Dashboard>div.DashboardSidebar div.options{
-        margin-top: 50px;
-    }
-
-
-    .CardsDiv{
-        width: 100%;
-        /* flex-direction: column; */
-    }
-
-    /* .CardsDiv>div{
+  /* .CardsDiv>div{
         width:98%; 
         margin-top: 10px;
     } */
 
-    /* .CardsDiv>div:not(:last-child){
+  /* .CardsDiv>div:not(:last-child){
         width:47%;
         margin-top: 10px; 
     } */
 
-    .CardsDiv>div{
-        width:47%;
-        margin-top: 10px; 
-        height: 140px;
-        border-radius: 4px; 
-    }
+  .CardsDiv > div {
+    width: 47%;
+    margin-top: 10px;
+    height: 140px;
+    border-radius: 4px;
+  }
 
+  .CircularBar {
+    width: 60%;
+  }
 
-    .CircularBar{
-        width:60%;
-    }
+  .CardsDiv > div > div h5 {
+    margin: 6px 0px;
+    font-weight: 100;
+    font-size: 10px;
+    padding: 0;
+    margin-left: 5px;
+  }
 
+  .chartDiv {
+    flex-direction: column;
+  }
 
+  .chartDiv > div:first-child {
+    width: 100%;
+    padding-top: 20px;
+  }
 
-    .CardsDiv>div>div h5{
-       margin: 6px 0px;
-       font-weight: 100;
-       font-size: 10px;
-       padding: 0;
-       margin-left:5px ;
-    }
-
-
-    .chartDiv{
-        flex-direction: column;
-    }
-    
-    
-     .chartDiv>div:first-child{
-        width: 100%;
-        padding-top: 20px;
-       
-     }
-    
-     .chartDiv>div:last-child{
-        width: 100%;
-        padding-top: 20px;
-        margin-bottom: 10px;
-       
-     }
-
- 
-
-
+  .chartDiv > div:last-child {
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
 }
