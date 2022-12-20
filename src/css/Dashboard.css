@@ -359,6 +359,19 @@ div.ShowRequests> div.request{
     
   }
 
+  div.ReqModalDesc div{
+    display: flex;
+    align-items: center;
+  }
+
+  div.request button{
+    margin : 0 5px;
+  }
+
+  div.ProfileDiv{
+    background-color: transparent !important;
+  }
+
 
 
 

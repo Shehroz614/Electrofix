@@ -21,8 +21,7 @@ function NewRequest() {
       }
       return true;
     });
-    console.log("These are all agents");
-    console.log(userAgents);
+    
     setAgents(userAgents);
   };
 
