@@ -24,7 +24,7 @@ function RequestPreviewModal(props) {
           </Typography> </div>
           <div className="OrderModalDetails">
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          <h3>Title :{"  "+props.request.title}</h3>
+          <h3>Title :<span style={{"fontWeight": "400"}}>{"  "+props.request.title}</span></h3>
           </Typography>
           </div>
 

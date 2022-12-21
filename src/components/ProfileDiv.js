@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {get} from '../helpers/FetchApi';
+import EditIcon from '@mui/icons-material/Edit';
 
 function ProfileDiv() {
 
@@ -32,29 +33,31 @@ function ProfileDiv() {
     <div className='ProfileDiv'>
       <h2 style={{textAlign: "center"}}>Profile</h2>
       <div className='ProfileUpper'>
-        <div>
-         <h4>image</h4>
+        <div className='profileImage'>
+         <img src="/Assets/images/shehroz.jpeg" alt="" />
+         <p className='imageEdit'>Edit</p>
         </div>
         <div>
-         <h3>First Name: {ThisUser.fname}</h3>
-         <h3>Last Name: {ThisUser.lname}</h3>
-         <h3>Age: {calculate_age(ThisUser.DOB)}</h3>
-         <h3>City: {ThisUser.city}</h3>
+         <div><h3>First Name: </h3>{ThisUser.fname}</div>
+         {/* <div style={{"display":"flex"}}><h3>First Name: </h3><p style={{"marginTop" : "7%", "marginLeft" : "3%"}}>{ThisUser.fname}</p></div> */}
+         <div><h3>Last Name: </h3>{ThisUser.lname}</div>
+         <div> <h3>Age: </h3>{calculate_age(ThisUser.DOB)}</div>
+         <div><h3>City: </h3>{ThisUser.city}</div>
         </div>
       </div>
 
       <hr></hr>
 
       <div className='ProfileLower'>
-      {(ThisUser.userType === "agent") &&  <h3>Skills: {ThisUser.skills.map((v, index) => (
+      {(ThisUser.userType === "agent") &&  <div><h3>Skills: </h3>{ThisUser.skills.map((v, index) => (
                   <span key={index}>
                     {v.skill+"\n"}
                   </span>
-                ))}</h3>}
-         <h3>Date Joined: {ThisUser.dateJoined &&  ThisUser.dateJoined.slice(0,10)}</h3>
-         {(ThisUser.userType === "agent") &&  <h3>Rating: {ThisUser.rating}</h3>}
-         {(ThisUser.userType === "agent") &&  <h3>Earning: {ThisUser.earned}</h3>}
-         {(ThisUser.userType === "client") &&  <h3>Spent: {ThisUser.spent}</h3>}
+                ))}<span className="EditIcon"><EditIcon style={{"fontSize":"16px", "color" : "blue"}} /> </span></div>}
+        <div> <h3>Date Joined: </h3>{ThisUser.dateJoined &&  ThisUser.dateJoined.slice(0,10)}</div>
+         {(ThisUser.userType === "agent") &&  <div><h3>Rating: </h3>{ThisUser.rating}</div>}
+         {(ThisUser.userType === "agent") &&  <div><h3>Earning: </h3>{ThisUser.earning}</div>}
+         {(ThisUser.userType === "client") && <div> <h3>Spent: </h3>{ThisUser.spent}</div>}
 
       </div>
 

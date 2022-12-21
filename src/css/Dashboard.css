@@ -243,9 +243,9 @@ NewRequestDiv > div.options > div{
   justify-content: space-around;
   padding: 20px;
   border-bottom: 1px solid rgb(216, 216, 216);
-  
 }
 
+.
 .NewRequestDiv > div.showAgents > div.agent > div {
   flex:1
 }
@@ -348,6 +348,11 @@ div.ShowRequests> div.request{
     
   }
 
+
+  div.ShowRequests> div.request:hover{
+    background-color: rgba(184, 184, 184, 0.123);
+  }
+
   div.ShowRequests> div.request div{
     flex: 1
     
@@ -373,13 +378,17 @@ div.ShowRequests> div.request{
     background-color: transparent !important;
   }
 
+  div.ProfileDiv h3{
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+
   div.ProfileUpper{
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-
+    margin-bottom: 30px;
+    margin-top: 10px;
   }
 
   div.ProfileUpper>div:first-child{
@@ -392,8 +401,30 @@ div.ShowRequests> div.request{
     flex-wrap: wrap;
   }
 
-  div.ProfileUpper>div:last-child>h3{
-    width: 45%;
+  div.ProfileUpper>div:last-child>div{
+    width: 45%
+  }
+
+  p.imageEdit{
+    margin-left: 20%;
+    /* text-align: center; */
+     color: blue;
+      cursor: pointer
+  }
+
+  p.imageEdit:hover{
+     color: rgb(0, 0, 138);
+  }
+
+
+
+  div.ProfileUpper>div.profileImage{
+    /* width: 100% */
+  }
+
+  div.ProfileUpper>div.profileImage>img{
+    width: 50%;
+    border-radius: 50%;
   }
 
   div.ProfileLower{
@@ -401,7 +432,7 @@ div.ShowRequests> div.request{
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 
   }
 
@@ -409,6 +440,92 @@ div.ShowRequests> div.request{
     width: 45%
 
   }
+
+  span.EditIcon{
+    cursor: pointer
+  }
+
+  span.EditIcon:hover{
+    color: rgb(0, 0, 138);
+}
+
+
+span.EditIcon svg.MuiSvgIcon-root{
+    margin-bottom: -2.8px;
+  }
+
+
+
+  div.MessagesDiv{
+    background-color: transparent !important;
+  }
+
+  div.MessagesDiv h2{
+    margin-top: 5px;
+  }
+
+  div.Chatbox{
+    display: flex;
+    border: 2px solid rgb(145, 145, 145);
+    border-radius: 17px;
+    background-color: white;
+  }
+
+  div.Chatbox h2{
+    font-weight: 400;
+    margin-bottom: 7px;
+
+  }
+
+  div.Chatbox>div.chats{
+        width:30%;
+        background-color: rgb(149, 149, 160);
+        height: 74vh !important;
+        border-radius: 3%;
+        padding: 0 10px;
+        /* overflow-y: scroll; */
+        overflow: hidden;
+  }
+
+  div.Chatbox>div.chats>div.chatlist{
+    overflow-y : scroll;
+    overflow-x: hidden;
+    height: 85%;
+    margin-bottom: 10px;
+    color: rgb(226, 226, 226);
+}
+
+  div.Chatbox>div.messages{
+    width:65%;
+    padding: 0 10px;
+}
+
+div.Chatbox div.chat{
+    width:94%;
+    display:flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 8px;
+}
+
+div.Chatbox div.chat:hover{
+    background-color:rgb(121, 121, 136); ;
+}
+
+div.Chatbox div.chatimagediv{
+    width:20%
+}
+
+div.Chatbox div.chatdetailsdiv{
+    width:75%;
+    
+}
+
+div.chatimagediv img{
+    width: 70%;
+    border-radius: 50%;
+}
+
+
 
 
 

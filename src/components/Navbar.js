@@ -96,7 +96,7 @@ function Nabvar() {
                 <img src="/Assets/images/shehroz.jpeg" alt="" />
               </motion.div>
               <motion.div whileTap={{ scale: 0.97 }} key="dropdown2">
-                <Link to="/dashboard/">{state.user.fname}</Link>
+                <Link to="/dashboard/">{state.user &&  state.user.fname}</Link>
               </motion.div>
               <motion.div
                 key="dropdown"
