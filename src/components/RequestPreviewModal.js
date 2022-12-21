@@ -29,10 +29,11 @@ function RequestPreviewModal(props) {
           </div>
 
           <div className="ReqModalDesc" >
-            <div><h3>Client : </h3>&nbsp;{"  "+props.request.client.fname}</div>
-            <div><h3>Agent : </h3>&nbsp;{"  "+props.request.agent.fname}</div>
+            <div><h3>Client : </h3>&nbsp;{"  "+props.request.client.fname+" "+props.request.client.lname}</div>
+            <div><h3>Agent : </h3>&nbsp;{"  "+props.request.agent.fname+" "+props.request.agent.lname}</div>
             <div><h3>Description : </h3>&nbsp;{"  "+props.request.discription}</div>
-            <div><h3>Amount : </h3>&nbsp;{"  "+props.request.payment}</div>
+            <div><h3>Amount : </h3>&nbsp;{"  "+props.request.payment+" Rs"}</div>
+            <div><h3>status : </h3>&nbsp;{"  "+props.request.status}</div>
           </div>
         </Box>
         </div>

@@ -275,7 +275,7 @@ NewRequestDiv > div.options > div{
       width:30%;
       margin-Left:auto;
       margin-Right: auto;
-      margin-Top:13%;
+      margin-Top:8%;
       border-Radius: 5px;
       text-Align:center;
       transition: all 0.2s;
@@ -356,6 +356,7 @@ div.ShowRequests> div.request{
   
   div.ShowRequests> div.request div:last-child{
     text-align: center;
+    /* flex:0; */
     
   }
 
@@ -371,6 +372,44 @@ div.ShowRequests> div.request{
   div.ProfileDiv{
     background-color: transparent !important;
   }
+
+  div.ProfileUpper{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+  }
+
+  div.ProfileUpper>div:first-child{
+    width: 30%;
+  }
+
+  div.ProfileUpper>div:last-child{
+    width: 60%;
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  div.ProfileUpper>div:last-child>h3{
+    width: 45%;
+  }
+
+  div.ProfileLower{
+    display:flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 50px;
+
+  }
+
+  div.ProfileLower>*{
+    width: 45%
+
+  }
+
 
 
 
