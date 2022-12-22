@@ -20,7 +20,7 @@ const getOrders = async () => {
 
   const userOrders = AllOrders.filter(function (order) {
     if (order.client._id === user._id  || order.agent._id === user._id  ) {
-      if(order.status!=="working"){
+      if(order.status!=="working" && order.status!=="completed" && order.status!=="abandoned" ){
         return true; // skip
         }
     }

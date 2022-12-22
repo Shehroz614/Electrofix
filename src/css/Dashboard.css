@@ -245,8 +245,8 @@ NewRequestDiv > div.options > div{
   border-bottom: 1px solid rgb(216, 216, 216);
 }
 
-.
-.NewRequestDiv > div.showAgents > div.agent > div {
+
+div.NewRequestDiv > div.showAgents > div.agent > div {
   flex:1
 }
 
@@ -508,7 +508,8 @@ div.Chatbox div.chat{
 }
 
 div.Chatbox div.chat:hover{
-    background-color:rgb(121, 121, 136); ;
+    background-color:rgb(121, 121, 136); 
+    cursor: pointer;
 }
 
 div.Chatbox div.chatimagediv{
@@ -523,6 +524,54 @@ div.Chatbox div.chatdetailsdiv{
 div.chatimagediv img{
     width: 70%;
     border-radius: 50%;
+}
+
+div.messages>div.ChatMessages{
+    height: 65%;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 10px;
+    
+}
+
+div.TypeMessage{
+    /* width: 99%; */
+    height: 11vh;
+    display: flex;
+    margin-bottom: 0;
+    margin-top: auto;
+    gap:15px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(149, 149, 160);
+    
+}
+
+div.TypeMessage>Textarea.MessageText{
+    width: 85%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+div.TypeMessage>div.MessageOptions{
+    width: 5%;
+    align-self: baseline;
+}
+
+div.TypeMessage>div.MessageOptions>button{
+    margin-top: 100%;
+    padding: 7px 20px;
+    background-color:rgb(241, 241, 241);
+    color: rgb(65, 65, 65);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+div.TypeMessage>div.MessageOptions>button:hover{
+    background-color:rgb(233, 233, 233);
+    
 }
 
 
