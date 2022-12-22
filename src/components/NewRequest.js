@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import agents from "../helpers/Agents";
 import { get } from "../helpers/FetchApi";
 import { motion } from "framer-motion";
 import NewOrderModal from "./NewOrderModal";

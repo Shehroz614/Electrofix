@@ -508,7 +508,7 @@ div.Chatbox div.chat{
 }
 
 div.Chatbox div.chat:hover{
-    background-color:rgb(121, 121, 136); 
+    background-color:rgb(107, 107, 121); 
     cursor: pointer;
 }
 
@@ -530,6 +530,7 @@ div.messages>div.ChatMessages{
     height: 65%;
     border: 1px solid rgb(221, 221, 221);
     padding: 10px;
+    overflow-y: scroll;
     
 }
 
@@ -547,6 +548,11 @@ div.TypeMessage{
     
 }
 
+div.TypeMessage div.AttachIcon svg.MuiSvgIcon-root{
+margin-top: -3px;
+}
+
+
 div.TypeMessage>Textarea.MessageText{
     width: 85%;
     border: 1px solid grey;
@@ -556,11 +562,31 @@ div.TypeMessage>Textarea.MessageText{
 
 div.TypeMessage>div.MessageOptions{
     width: 5%;
-    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
-div.TypeMessage>div.MessageOptions>button{
-    margin-top: 100%;
+div.TypeMessage div.MessageAttachments{
+    display: flex;
+    gap: 10px;
+    justify-items: center;
+    /* justify-content: center; */
+    margin-left: 15%;
+}
+
+div.TypeMessage div.MessageAttachments>div{
+    cursor: pointer;
+}
+
+.ActiveChat{
+    background-color:rgb(107, 107, 121);
+}
+ 
+
+div.TypeMessage>div.MessageOptions>div>button{
+    /* margin-top: 70%; */
     padding: 7px 20px;
     background-color:rgb(241, 241, 241);
     color: rgb(65, 65, 65);

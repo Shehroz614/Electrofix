@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import chats from "../helpers/Chats";
 import { motion } from "framer-motion";
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import AttachmentIcon from '@mui/icons-material/Attachment';
 
 function MessagesDiv() {
-  const HandleClick = () => {};
+
+  const [chatName, setChatName] = useState("");
+
+  // const [clicked, setClicked] = useState(false);
+  //   const HandleClick = (e, ) => {
+  //   setClicked(!clicked);
+  // };
 
   return (
     <div className="MessagesDiv">
@@ -14,7 +22,9 @@ function MessagesDiv() {
           <div className="chatlist">
             {chats.map((chat, index) => {
               return (
-                <div className="chat" key={index} onClick={HandleClick}>
+                <motion.div key={index} onClick={() => {setChatName(chat.name)}} 
+                 whileTap={{scale:0.99}}
+                className={chat.name===chatName ? "ActiveChat chat" : "chat"}>
                   <div className="chatimagediv">
                     <img src="/Assets/images/shehroz.jpeg" alt="" />
                   </div>
@@ -22,7 +32,7 @@ function MessagesDiv() {
                     <h5 style={{margin: 0,marginBottom: "4px", fontWeight: "600"}} > {chat.name} </h5>
                     <span style={{ fontSize: "13px" }}>{chat.lmsg}</span>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -33,7 +43,11 @@ function MessagesDiv() {
           <div className="TypeMessage">
             <textarea className="MessageText"></textarea>
             <div className="MessageOptions">
-              <motion.button whileTap={{ scale: 0.98 }}>Send</motion.button>
+              <div className="MessageAttachments">
+                <div className="emojiIcon"><EmojiEmotionsIcon sx={{"color": "yellow", "fontSize" : "22px"}} /></div>
+                <div className="AttachIcon"><AttachmentIcon sx={{"color": "#042241", "transform": "rotate(45deg)", "fontSize" : "24px"}} /></div>
+              </div>
+              <div><motion.button whileTap={{ scale: 0.98 }}>Send</motion.button></div>
             </div>
           </div>
         </div>
