@@ -425,6 +425,7 @@ div.ShowRequests> div.request{
   div.ProfileUpper>div.profileImage>img{
     width: 50%;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   div.ProfileLower{
@@ -552,9 +553,17 @@ div.TypeMessage div.AttachIcon svg.MuiSvgIcon-root{
 margin-top: -3px;
 }
 
+div.TypeMessage div.textarea{
+    width: 87%;
+    /* overflow: hidden; */
+    position: relative;
+    padding: 0;
+    
+}
 
-div.TypeMessage>Textarea.MessageText{
-    width: 85%;
+div.TypeMessage Textarea.MessageText{
+    width: 99%;
+    height: 70%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px;
@@ -564,16 +573,17 @@ div.TypeMessage>div.MessageOptions{
     width: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex: content;
     
 }
 
 div.TypeMessage div.MessageAttachments{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-items: center;
-    /* justify-content: center; */
-    margin-left: 15%;
+    margin-top:4px;
+    margin-left: 5%;
 }
 
 div.TypeMessage div.MessageAttachments>div{
@@ -598,6 +608,21 @@ div.TypeMessage>div.MessageOptions>div>button{
 div.TypeMessage>div.MessageOptions>button:hover{
     background-color:rgb(233, 233, 233);
     
+}
+
+div.skillsDiv{
+    display: flex;
+    margin: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:20px
+}
+
+div.addedSkills{
+    display: flex;
+    background-color: rgb(207, 207, 207);
+    padding: 2px;
+    font-size: 12px;
 }
 
 

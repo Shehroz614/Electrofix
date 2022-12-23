@@ -3,13 +3,14 @@ import chats from "../helpers/Chats";
 import { motion } from "framer-motion";
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import AttachmentIcon from '@mui/icons-material/Attachment';
+import CircleIcon from '@mui/icons-material/Circle';
 
 function MessagesDiv() {
 
   const [chatName, setChatName] = useState("");
 
   // const [clicked, setClicked] = useState(false);
-  //   const HandleClick = (e, ) => {
+  //   const HandleClick = (e) => {
   //   setClicked(!clicked);
   // };
 
@@ -29,7 +30,7 @@ function MessagesDiv() {
                     <img src="/Assets/images/shehroz.jpeg" alt="" />
                   </div>
                   <div className="chatdetailsdiv">
-                    <h5 style={{margin: 0,marginBottom: "4px", fontWeight: "600"}} > {chat.name} </h5>
+                    <span style={{"display":"flex","alignItems":"center","gap":"2px"}}><h5 style={{margin: 0,marginBottom: "4px", fontWeight: "600"}} > {chat.name} </h5><span><CircleIcon sx={{"fontSize":"10px", "color":"green"}} /></span></span>
                     <span style={{ fontSize: "13px" }}>{chat.lmsg}</span>
                   </div>
                 </motion.div>
@@ -38,14 +39,20 @@ function MessagesDiv() {
           </div>
         </div>
         <div className="messages">
-          <h2>Messages</h2>
+          <div style={{"display":"flex","alignItems":"center"}}><h3 style={{"fontWeight":"500"}}>{chatName}</h3><span><CircleIcon sx={{"fontSize":"10px", "color":"green"}} /></span></div>
           <div className="ChatMessages"></div>
           <div className="TypeMessage">
-            <textarea className="MessageText"></textarea>
+            <div className="textarea">
+              <div style={{"fontSize": "12px","marginTop": "-5px", "color": "white", "display": "flex"}}>
+                <span>Attachment: </span>
+                <div>&nbsp;File Name<span></span></div>
+              </div>
+              <textarea className="MessageText"></textarea>
+              </div>
             <div className="MessageOptions">
               <div className="MessageAttachments">
                 <div className="emojiIcon"><EmojiEmotionsIcon sx={{"color": "yellow", "fontSize" : "22px"}} /></div>
-                <div className="AttachIcon"><AttachmentIcon sx={{"color": "#042241", "transform": "rotate(45deg)", "fontSize" : "24px"}} /></div>
+                <div className="AttachIcon"><AttachmentIcon sx={{"color": "#042241", "transform": "rotate(45deg)", "fontSize" : "25px"}} /></div>
               </div>
               <div><motion.button whileTap={{ scale: 0.98 }}>Send</motion.button></div>
             </div>
