@@ -54,11 +54,13 @@ useEffect(() => {
 
   return (
     <div className="RequestsDiv">
+      { ThisUser.userType !== "agent" &&
       <motion.div
         whileTap={{scale:0.98}}
        className="NewRequestButton" >
         <Link to="/dashboard/requests/new"><div><AddIcon sx={{fontSize:"25px"}}/>New Request</div></Link>
        </motion.div>
+}
        <h2 style={{textAlign: "center"}}>Requests</h2>
       <div className="ShowRequests">
         <div className="request">
@@ -103,7 +105,7 @@ useEffect(() => {
                 :
                 (<div>
                   <motion.button
-                  className="RequestCancelButton"
+                  className="RequestAcceptButton"
                   onClick={(e) => {
                     e.stopPropagation();
                     setCurRequest(order);

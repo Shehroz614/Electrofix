@@ -97,7 +97,7 @@ useEffect(() => {
                 :
                 (<div>
                   <motion.button
-                  className="RequestCancelButton"
+                  className="RequestAcceptButton"
                   onClick={(e) => {
                     e.stopPropagation();
                     setCurRequest(order);
@@ -106,7 +106,7 @@ useEffect(() => {
                   disabled = {order.status==="completed" || order.status==="abandoned" ? true : false}
                   whileTap={{ scale: 0.9 }}
                 >
-                  complete
+                  Settle
                 </motion.button>
                   <motion.button
                   className="RequestCancelButton"
@@ -118,7 +118,7 @@ useEffect(() => {
                   disabled = {order.status==="completed" || order.status==="abandoned" ? true : false}
                   whileTap={{ scale: 0.9 }}
                 >
-                  cancel
+                  Cancel
                 </motion.button>
                 </div>
                 )
